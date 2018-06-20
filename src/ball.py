@@ -22,6 +22,8 @@ class Ball:
             self.velocity.x *= -1
         # screen height
         if self.position.y < 0 + self.radius or self.position.y > self.bounds[1] - self.radius:
+            if self.position.y <= 6:
+                self.position.y = 7
             self.velocity.y *= -1
         self.position += self.velocity
 

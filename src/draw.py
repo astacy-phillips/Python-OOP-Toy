@@ -4,6 +4,7 @@ import random
 from pygame.math import Vector2
 
 from ball import *
+from rect import *
 
 SCREEN_SIZE = [640, 480]
 BACKGROUND_COLOR = [255, 255, 255]
@@ -13,7 +14,11 @@ def debug_create_objects(object_list):
     for i in range(5):
         ball = BouncingRainbow(SCREEN_SIZE, Vector2(random.randint(100, 400), random.randint(100, 400)),
                                Vector2(random.random(), random.random()), [255, 0, 0], 10)
+
         object_list.append(ball)
+
+    rect = Rect(SCREEN_SIZE, [255, 0, 0], (150, 40, 100, 10))
+    object_list.append(rect)
 
     # TODO: Create other ball types for testing
 
